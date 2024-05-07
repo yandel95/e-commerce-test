@@ -1,0 +1,397 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+  @import url("https://fonts.cdnfonts.com/css/proxima-nova-condensed");
+
+  #mobile-menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0 10px 0;
+    position: relative;
+    z-index: 999;
+  }
+
+  .modal-show {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 999;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .modal-bts {
+    background-color: #7aa65a;
+    color: #ffffff;
+  }
+  .input-checked {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  .bg-green {
+    background-color: #7aa65a;
+    color: #7aa65a;
+  }
+
+  /*header cart*/
+  .cart-empty {
+    padding: 20px;
+    text-align: center;
+    color: #7aa65a;
+    font-family: "Proxima Nova Condensed";
+  }
+
+  .btn-clear-all {
+    width: 98px;
+    height: 26px;
+    background-color: #7aa65a;
+    color: #ffffff;
+    border-radius: 20px;
+    font-family: "Proxima Nova Condensed";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .btn-clear-all:hover {
+    background-color: inherit;
+    color: #7aa65a;
+    border: 2px solid #7aa65a;
+  }
+
+  .icon-cart {
+    width: 25px;
+    height: 25px;
+    stroke: #000;
+  }
+
+  .icon-cart:hover {
+    cursor: pointer;
+  }
+
+  .container-icon {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0 10px 0;
+    position: relative;
+    z-index: 999;
+  }
+
+  .container-icon {
+    position: relative;
+  }
+
+  .count-products {
+    position: absolute;
+    top: 55%;
+    right: 0;
+    background-color: #7aa65a;
+    color: #fff;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+
+  #count-products-span {
+    font-size: 8px;
+  }
+
+  .container-cart-products {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #fff;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+
+  .cart-product {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  .info-cart-product {
+    display: flex;
+    justify-content: space-between;
+    flex: 0.8;
+  }
+
+  .product-title-cart {
+    font-family: "Proxima Nova Condensed";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .price-product-cart {
+    font-family: "Proxima Nova Condensed";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .quantity-product-cart {
+    font-family: "Proxima Nova Condensed";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .icon-close {
+    width: 25px;
+    height: 25px;
+  }
+
+  .icon-close:hover {
+    stroke: red;
+    cursor: pointer;
+  }
+
+  .cart-total {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+  }
+
+  .cart-total h3 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .total-to-pay {
+    font-size: 20px;
+    font-weight: 900;
+  }
+
+  .hidden-cart {
+    display: none;
+  }
+}
+
+@layer utilities {
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+  @import url("https://fonts.cdnfonts.com/css/proxima-nova-condensed");
+
+  .bg-banner-nav {
+    background-color: #7aa65a;
+    width: 100%;
+    height: 24px;
+  }
+
+  .bg-banner-nav-text {
+    color: #ffffff;
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13.31px;
+  }
+
+  .bg-nav {
+    background-color: #ffffff;
+    width: 100%;
+    height: 70px;
+  }
+
+  .bg-tabs-nav-active {
+    color: #7aa65a;
+    border-color: #7aa65a;
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19.36px;
+    padding-bottom: 0;
+  }
+
+  .bg-tabs-nav {
+    color: #7aa65a;
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.36px;
+  }
+
+  .swiper-nav-btn {
+    background-color: #7aa65a;
+    color: #ffffff;
+    border-radius: 99px;
+    width: 41px;
+    height: 31px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-nav-btn:hover {
+    background-color: inherit;
+    color: #7aa65a;
+    border-radius: 99px;
+    border: 2px solid #7aa65a;
+    width: 41px;
+    height: 31px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Mobile */
+  @media only screen and (max-width: 600px) {
+    .swiper-btn-group {
+      background-color: inherit;
+      color: #000000;
+      padding: 1rem 3rem;
+      border-radius: 16px;
+      font-family: "Proxima Nova Condensed";
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 16px;
+    }
+
+    .swiper-btn-group-active {
+      background-color: #7aa65a;
+      border: 2px solid #7aa65a;
+      color: #ffffff;
+      padding: 1rem 3rem;
+      border-radius: 16px;
+      font-family: "Proxima Nova Condensed";
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 16px;
+    }
+
+    .swiper-button-group {
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .swiper-nav-button {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .bg-label-text {
+      color: rgba(122, 166, 90, 0.58);
+      font-family: "Inter";
+      font-weight: 700;
+      font-size: 29px;
+      line-height: 40px;
+    }
+
+    .bg-swiper-title {
+      color: #7aa65a;
+      width: 270px;
+      height: 83px;
+      font-family: "Inter";
+      font-weight: 400;
+      font-size: 37px;
+      line-height: 41.5px;
+      text-align: center;
+    }
+  }
+
+  /* Desktop */
+  @media only screen and (min-width: 601px) {
+    .swiper-btn-group {
+      background-color: inherit;
+      border: 2px solid #7aa65a;
+      color: #7aa65a;
+      padding: 1rem 3rem;
+      border-radius: 16px;
+      font-family: "Proxima Nova Condensed";
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 16px;
+    }
+
+    .swiper-btn-group-active {
+      background-color: #7aa65a;
+      border: 2px solid #7aa65a;
+      color: #ffffff;
+      padding: 1rem 3rem;
+      border-radius: 16px;
+      font-family: "Proxima Nova Condensed";
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 16px;
+    }
+
+    .bg-label-text {
+      color: rgba(122, 166, 90, 0.58);
+      font-family: "Inter";
+      font-weight: 700;
+      font-size: 34px;
+      line-height: 40px;
+    }
+
+    .bg-swiper-title {
+      color: #7aa65a;
+      width: 507px;
+      height: 122px;
+      font-family: "Inter";
+      font-weight: 400;
+      font-size: 60px;
+      line-height: 61px;
+    }
+
+    .bg-swiper-subtitle {
+      color: #7aa65a;
+      width: 482px;
+      height: 52px;
+      font-family: "Proxima Nova Condensed";
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+
+  .bg-price-card {
+    color: #000000;
+    width: 61px;
+    height: 40px;
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+  }
+
+  .bg-btn-card {
+    width: 98px;
+    height: 26px;
+    background-color: #7aa65a;
+    color: #ffffff;
+    border-radius: 20px;
+    font-family: "Proxima Nova Condensed";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .bg-btn-card:hover {
+    background-color: inherit;
+    color: #7aa65a;
+    border: 2px solid #7aa65a;
+  }
+
+  .shadow-card {
+    border-radius: 20px;
+    box-shadow: 3px 3px 9px 0 rgba(0, 0, 0, 0.25);
+  }
+}
