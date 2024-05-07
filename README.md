@@ -1,6 +1,6 @@
 # 🛍️ Responsive E-Commerce Shopping Website
 
-## Video
+## 🎬 Video
 
 ![](https://github.com/yandel95/e-commerce-test/blob/main/test-video.gif)
 
