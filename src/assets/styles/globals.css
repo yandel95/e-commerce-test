@@ -14,6 +14,33 @@
     z-index: 999;
   }
 
+  .bg-green-style {
+    color: #7aa65a;
+  }
+
+  .bg-green-checkout {
+    background: #7aa65a;
+    border-radius: 16px;
+  }
+
+  .bg-btn-checkout {
+    background-color: #7aa65a;
+    color: #ffffff;
+    border-radius: 20px;
+    font-family: "Proxima Nova Condensed";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .sidebar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0 10px 0;
+    position: relative;
+    z-index: 999;
+  }
+
   .modal-show {
     display: flex;
     justify-content: space-between;
@@ -30,6 +57,7 @@
     background-color: #7aa65a;
     color: #ffffff;
   }
+
   .input-checked {
     background-color: #ffffff;
     color: #000000;
@@ -86,50 +114,6 @@
 
   .container-icon {
     position: relative;
-  }
-
-  .count-products {
-    position: absolute;
-    top: 55%;
-    right: 0;
-    background-color: #7aa65a;
-    color: #fff;
-    width: 15px;
-    height: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-  }
-
-  #count-products-span {
-    font-size: 8px;
-  }
-
-  .container-cart-products {
-    position: absolute;
-    top: 50px;
-    right: 0;
-    background-color: #fff;
-    width: auto;
-    height: auto;
-    z-index: 1;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-  }
-
-  .cart-product {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 30px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  }
-
-  .info-cart-product {
-    display: flex;
-    justify-content: space-between;
-    flex: 0.8;
   }
 
   .product-title-cart {
@@ -239,7 +223,7 @@
     align-items: center;
   }
 
-  .swiper-nav-btn:hover {
+  .swiper-nav-btn-inactive {
     background-color: inherit;
     color: #7aa65a;
     border-radius: 99px;

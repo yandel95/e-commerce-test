@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 
-const Modal = (props) => {
-  const { product, onAddProduct, closeModal } = props;
+const Modal = ({ product, closeModal }) => {
+  const { id, title, price, quantity } = product;
+  const { addToCart } = useContext(CartContext);
 
   const handleAddProduct = () => {
-    onAddProduct(product);
+    addToCart(product, id);
     closeModal();
   };
 
@@ -32,15 +34,13 @@ const Modal = (props) => {
           <form className="flex-auto p-6">
             <div className="flex flex-wrap">
               <h1 className="flex-auto text-lg font-semibold text-slate-900">
-                {product.name.length > 12
-                  ? product.name.slice(0, 12) + "..."
-                  : product.name}
+                {title.length > 12 ? title.slice(0, 12) + "..." : title}
               </h1>
               <div className="text-lg font-semibold text-slate-900">
-                ${product.price}
+                ${price}
               </div>
               <div className="w-full flex-none text-sm font-medium text-slate-700 mt-2">
-                In stock {product.quantity}
+                In stock {quantity}
               </div>
             </div>
             <div className="flex items-baseline mt-4 mb-6 pb-6 border-b border-slate-200">
@@ -113,7 +113,7 @@ const Modal = (props) => {
                 >
                   BUY NOW
                 </button>
-                <button className="bg-btn-card " onClick={handleAddProduct}>
+                <button className="bg-btn-card" onClick={handleAddProduct}>
                   ADD TO CART
                 </button>
               </div>
